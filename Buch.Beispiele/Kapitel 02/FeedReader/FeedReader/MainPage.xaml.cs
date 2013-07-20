@@ -53,7 +53,7 @@ namespace FeedReader {
     }
 
     private async void btnRefresh_Click(object sender, RoutedEventArgs e) {
-      var addr = "https://dotnetautor.de/GetRssFeed";
+      var addr = "http://dotnetautor.de/GetRssFeed";
       var articles = await UpdateFeed(addr);
       lbFeed.ItemsSource = articles;
 
