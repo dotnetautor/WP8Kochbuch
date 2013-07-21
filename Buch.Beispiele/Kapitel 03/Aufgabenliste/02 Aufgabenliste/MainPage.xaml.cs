@@ -24,13 +24,15 @@ namespace Aufgabenliste {
     protected override void OnNavigatedTo(NavigationEventArgs e) {
       _items = new ObservableCollection<TodoItem>(DataManager.Instance.TodoItems);
       lbTotoItems.ItemsSource = _items;
-
+      if (PhoneApplicationService.Current.State.ContainsKey("Aufgabe")){
+        tbTodo.Text = PhoneApplicationService.Current.State["Aufgabe"] as string ?? "";
+      }
       base.OnNavigatedTo(e);
     }
 
     protected override void OnNavigatedFrom(NavigationEventArgs e) {
       DataManager.Instance.TodoItems = _items.ToList();
-
+      PhoneApplicationService.Current.State["Aufgabe"] = tbTodo.Text;
       base.OnNavigatedFrom(e);
     }
 
