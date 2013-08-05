@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    x:Class="PhotoCaptureDeviceDemo.MainPage"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+  <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <!--TitlePanel contains the name of the application and page title-->
+    <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+      <TextBlock Text="Windows Phone 8 Kochbuch" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+      <TextBlock Text="CaptureDevice" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+    </StackPanel>
+
+    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+      <Canvas HorizontalAlignment="Left" Height="169" Margin="67,84,0,0" 
+				VerticalAlignment="Top" Width="318">
+        <Canvas.Background>
+          <VideoBrush x:Name="viewfinder">
+            <VideoBrush.RelativeTransform>
+              <CompositeTransform x:Name="viewfinderTransform" CenterX=".5" CenterY=".5" />
+            </VideoBrush.RelativeTransform>
+          </VideoBrush>
+        </Canvas.Background>
+      </Canvas>
+      <Button Content="F/B" HorizontalAlignment="Left" Height="83" Margin="67,497,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_1"/>
+      <Button Content="Snap" HorizontalAlignment="Left" Height="85" Margin="221,497,0,0" VerticalAlignment="Top" Width="146" Click="Button_Click_2"/>
+      <toolkit:ListPicker x:Name="whiteBalanceList" ExpansionMode="ExpansionAllowed" HorizontalAlignment="Left" Margin="78,411,0,0" VerticalAlignment="Top" Width="278" SelectionChanged="whiteBalanceList_SelectionChanged">
+      <toolkit:ListPicker.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding Name}"></TextBlock>
+        </DataTemplate>
+      </toolkit:ListPicker.ItemTemplate>
+       <toolkit:ListPicker.FullModeItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding Name}"></TextBlock>
+        </DataTemplate>
+        </toolkit:ListPicker.FullModeItemTemplate>
+      </toolkit:ListPicker>
+      <toolkit:ListPicker x:Name="sceneList" HorizontalAlignment="Left" Margin="78,335,0,0" VerticalAlignment="Top" Width="278" SelectionChanged="sceneList_SelectionChanged">
+        <toolkit:ListPicker.ItemTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding Name}"/>
+          </DataTemplate>
+        </toolkit:ListPicker.ItemTemplate>
+        <toolkit:ListPicker.FullModeItemTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding Name}"/>
+          </DataTemplate>
+        </toolkit:ListPicker.FullModeItemTemplate>
+      </toolkit:ListPicker>
+    </Grid>
+  </Grid>
+
+</phone:PhoneApplicationPage>

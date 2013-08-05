@@ -1,0 +1,13 @@
+﻿<MainViewModel
+  xmlns="clr-namespace:Aufgabenliste.ViewModel"
+  xmlns:model="clr-namespace:Aufgabenliste.Model"
+  
+  >
+  <MainViewModel.Items>
+    <model:TodoItem IsDone="True" Name="Test1"/>
+    <model:TodoItem IsDone="False" Name="Test2"/>
+    <model:TodoItem IsDone="True" Name="Test3"/>
+    <model:TodoItem IsDone="False" Name="Test4"/>
+  </MainViewModel.Items>
+  
+</MainViewModel>

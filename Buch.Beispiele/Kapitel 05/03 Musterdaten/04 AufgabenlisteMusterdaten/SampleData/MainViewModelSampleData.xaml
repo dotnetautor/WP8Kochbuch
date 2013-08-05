@@ -1,0 +1,17 @@
+<ViewModel:MainViewModel xmlns:ViewModel="clr-namespace:Aufgabenliste.ViewModel" xmlns:Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.WP8" xmlns:Model="clr-namespace:Aufgabenliste.Model" IsInDesignMode="True" IsInDesignModeStatic="False" TodoText="Eleifend ante mauris fermentum facilisi">
+	<ViewModel:MainViewModel.AddCommand>
+		<Command:RelayCommand/>
+	</ViewModel:MainViewModel.AddCommand>
+	<ViewModel:MainViewModel.Items>
+		<Model:TodoItem IsDone="True" Name="Nam curabitur class phasellus"/>
+		<Model:TodoItem IsDone="False" Name="Cras duis"/>
+		<Model:TodoItem IsDone="True" Name="Curae aliquam vestibulum"/>
+		<Model:TodoItem IsDone="False" Name="Consequat sed maecenas convallis donec"/>
+		<Model:TodoItem IsDone="True" Name="Praesent adipiscing dignissim etiam parturient"/>
+		<Model:TodoItem IsDone="False" Name="Accumsan dis"/>
+		<Model:TodoItem IsDone="True" Name="Fusce bibendum"/>
+		<Model:TodoItem IsDone="False" Name="Nunc integer"/>
+		<Model:TodoItem IsDone="True" Name="Aenean est elementum"/>
+		<Model:TodoItem IsDone="False" Name="Quisque hac dictumst amet facilisis"/>
+	</ViewModel:MainViewModel.Items>
+</ViewModel:MainViewModel>
