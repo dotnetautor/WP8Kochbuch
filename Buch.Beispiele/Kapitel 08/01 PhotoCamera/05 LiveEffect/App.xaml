@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application 
+  x:Class="LiveEffect.App"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" 
+  xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:easyPhoto="clr-namespace:LiveEffect">
+
+    <!--Application Resources-->
+    <Application.Resources>
+      
+    <ResourceDictionary>
+      
+      <easyPhoto:LocalizedStrings p7:Key="LocalizedStrings" xmlns:p7="http://schemas.microsoft.com/winfx/2006/xaml" />
+      
+    </ResourceDictionary></Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService Launching="Application_Launching" Closing="Application_Closing" Activated="Application_Activated" Deactivated="Application_Deactivated" />
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

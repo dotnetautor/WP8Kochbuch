@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
+using FeedReaderWP8.Utilities;
+using FeedreaderCorePortableWinRT.Code.Utilities;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using SimpleLense.Resources;
+using FeedReaderWP8.Resources;
 
-namespace SimpleLense {
+namespace FeedReaderWP8 {
   public partial class App : Application {
     /// <summary>
     /// Provides easy access to the root frame of the Phone Application.
@@ -24,6 +27,8 @@ namespace SimpleLense {
 
       // Standard XAML initialization
       InitializeComponent();
+
+      PlatformAdapter.Current = new PhonePlatformAdapter();
 
       // Phone-specific initialization
       InitializePhoneApplication();
@@ -102,9 +107,6 @@ namespace SimpleLense {
       // screen to remain active until the application is ready to render.
       RootFrame = new PhoneApplicationFrame();
       RootFrame.Navigated += CompleteInitializePhoneApplication;
-
-      // Assign the lens example URI-mapper class to the application frame.
-      RootFrame.UriMapper = new LenseUriMapper();
 
       // Handle navigation failures
       RootFrame.NavigationFailed += RootFrame_NavigationFailed;

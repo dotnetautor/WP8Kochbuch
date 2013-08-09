@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 PhotoCaptureDeviceDemo",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 SimpleLense", "04 SimpleLense\04 SimpleLense.csproj", "{7020ED21-CD4B-4491-9B45-E30AE4058D3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 EasyPhoto", "05 EasyPhoto\05 EasyPhoto.csproj", "{76BFC9D9-72FC-4C08-AE96-881121445462}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 LiveEffect", "05 LiveEffect\05 LiveEffect.csproj", "{76BFC9D9-72FC-4C08-AE96-881121445462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

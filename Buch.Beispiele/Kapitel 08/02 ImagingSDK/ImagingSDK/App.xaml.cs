@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using SimpleLense.Resources;
+using ImagingSDK.Resources;
 
-namespace SimpleLense {
+namespace ImagingSDK {
   public partial class App : Application {
     /// <summary>
     /// Provides easy access to the root frame of the Phone Application.
@@ -102,9 +103,6 @@ namespace SimpleLense {
       // screen to remain active until the application is ready to render.
       RootFrame = new PhoneApplicationFrame();
       RootFrame.Navigated += CompleteInitializePhoneApplication;
-
-      // Assign the lens example URI-mapper class to the application frame.
-      RootFrame.UriMapper = new LenseUriMapper();
 
       // Handle navigation failures
       RootFrame.NavigationFailed += RootFrame_NavigationFailed;

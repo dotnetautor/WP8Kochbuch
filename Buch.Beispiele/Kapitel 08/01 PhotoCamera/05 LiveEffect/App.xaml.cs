@@ -3,11 +3,12 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
+using LiveEffect.Code.Utilities;
+using LiveEffect.Resources;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using SimpleLense.Resources;
 
-namespace SimpleLense {
+namespace LiveEffect {
   public partial class App : Application {
     /// <summary>
     /// Provides easy access to the root frame of the Phone Application.
@@ -105,6 +106,7 @@ namespace SimpleLense {
 
       // Assign the lens example URI-mapper class to the application frame.
       RootFrame.UriMapper = new LenseUriMapper();
+
 
       // Handle navigation failures
       RootFrame.NavigationFailed += RootFrame_NavigationFailed;
