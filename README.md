@@ -14,13 +14,12 @@ Sie können das  ganze Git-Repository mit allen Projekten mit dem Befehl `git cl
 ## Ausführen
 
 ## Inhalt
-* Kapitel 02
-** Test
-* Kapitel 03
-* Kapitel 04
-* Kapitel 05
-* Kapitel 06
-* Kapitel 07
-* Kapitel 08
-* Kpaitel 09
+* Kapitel 02 - Schnellstart
+* Kapitel 03 - Grundlagen WP8
+* Kapitel 04 - Aufbauwissen WP8
+* Kapitel 05 - UI Design
+* Kapitel 06 - Multiplattform
+* Kapitel 07 - Geolocation
+* Kapitel 08 - Photographie
+
 
